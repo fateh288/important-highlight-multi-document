@@ -1,0 +1,1198 @@
+Bayesian SegNet: Model Uncertainty in Deep Convolutional Encoder-Decoder
+Architectures for Scene Understanding
+Alex Kendall
+
+Vijay Badrinarayanan
+University of Cambridge
+
+Roberto Cipolla
+
+arXiv:1511.02680v2 [cs.CV] 10 Oct 2016
+
+agk34, vb292, rc10001 @cam.ac.uk
+
+Input Images
+
+Abstract
+We present a deep learning framework for probabilistic
+pixel-wise semantic segmentation, which we term Bayesian
+SegNet. Semantic segmentation is an important tool for
+visual scene understanding and a meaningful measure of
+uncertainty is essential for decision making. Our contribution is a practical system which is able to predict pixelwise class labels with a measure of model uncertainty. We
+achieve this by Monte Carlo sampling with dropout at test
+time to generate a posterior distribution of pixel class labels. In addition, we show that modelling uncertainty improves segmentation performance by 2-3% across a number
+of state of the art architectures such as SegNet, FCN and
+Dilation Network, with no additional parametrisation. We
+also observe a significant improvement in performance for
+smaller datasets where modelling uncertainty is more effective. We benchmark Bayesian SegNet on the indoor SUN
+Scene Understanding and outdoor CamVid driving scenes
+datasets.
+
+Bayesian SegNet Segmentation Output
+
+Bayesian SegNet Model Uncertainty Output
+
+1. Introduction
+Semantic segmentation requires an understanding of an
+image at a pixel level and is an important tool for scene understanding. It is a difficult problem as scenes often vary
+significantly in pose and appearance. However it is an important problem as it can be used to infer scene geometry
+and object support relationships. This has wide ranging applications from robotic interaction to autonomous driving.
+Previous approaches to scene understanding used low
+level visual features [32]. We are now seeing the emergence
+of machine learning techniques for this problem [31, 25].
+In particular deep learning [25] has set the benchmark on
+many popular datasets [11, 8]. However none of these deep
+learning methods produce a probabilistic segmentation with
+a measure of model uncertainty.
+Uncertainty should be a natural part of any predictive
+system’s output. Knowing the confidence with which we
+
+Figure 1: Bayesian SegNet. These examples show the performance of Bayesian SegNet on popular segmentation and scene
+understanding benchmarks: SUN [35] (left), CamVid [4] (center column) and Pascal VOC [11] (right). The system takes an
+RGB image as input (top), and outputs a semantic segmentation
+(middle row) and model uncertainty estimate, averaged across
+all classes (bottom row). We observe higher model uncertainty
+at object boundaries and with visually difficult objects. An online demo and source code can be found on our project webpage
+mi.eng.cam.ac.uk/projects/segnet/
+
+can trust the semantic segmentation output is important for
+decision making. For instance, a system on an autonomous
+vehicle may segment an object as a pedestrian. But it is desirable to know the model uncertainty with respect to other
+classes such as street sign or cyclist as this can have a strong
+1
+
+effect on behavioural decisions. Uncertainty is also immediately useful for other applications such as active learning
+[7], semi-supervised learning, or label propagation [1].
+The main contribution of this paper is extending deep
+convolutional encoder-decoder neural network architectures [3] to Bayesian convolutional neural networks which
+can produce a probabilistic segmentation output [13]. In
+Section 4 we propose Bayesian SegNet, a probabilistic deep
+convolutional neural network framework for pixel-wise semantic segmentation. We use dropout at test time which
+allows us to approximate the posterior distribution by sampling from the Bernoulli distribution across the network’s
+weights. This is achieved with no additional parameterisation.
+In Section 5, we demonstrate that Bayesian SegNet sets
+the best performing benchmark on prominent scene understanding datasets, CamVid Road Scenes [4] and SUN RGBD Indoor Scene Understanding [35]. In particular, we find
+a larger performance improvement on smaller datasets such
+as CamVid where the Bayesian Neural Network is able to
+cope with the additional uncertainty from a smaller amount
+of data.
+Moreover, we show in section 5.4 that this technique is
+broadly applicable across a number of state of the art architectures and achieves a 2-3% improvement in segmenation
+accuracy when applied to SegNet [3], FCN [25] and Dilation Network [40].
+Finally in Section 5.5 we demonstrate the effectiveness
+of model uncertainty. We show this measure can be used to
+understand with what confidence we can trust image segmentations. We also explore what factors contribute to
+Bayesian SegNet making an uncertain prediction.
+
+2. Related Work
+Semantic pixel labelling was initially approached with
+TextonBoost [32], TextonForest [30] and Random Forest
+Based Classifiers [31]. We are now seeing the emergence of
+deep learning architectures for pixel wise segmentation, following its success in object recognition for a whole image
+[21]. Architectures such as SegNet [3] Fully Convolutional
+Networks (FCN) [25] and Dilation Network [40] have been
+proposed, which we refer to as the core segmentation engine. FCN is trained using stochastic gradient descent with
+a stage-wise training scheme. SegNet was the first architecture proposed that can be trained end-to-end in one step,
+due to its lower parameterisation.
+We have also seen methods which improve on these core
+segmentation engine architectures by adding post processing tools. HyperColumn [16] and DeConvNet [27] use
+region proposals to bootstrap their core segmentation engine. DeepLab [6] post-processes with conditional random
+fields (CRFs) and CRF-RNN [42] use recurrent neural networks. These methods improve performance by smoothing
+
+the output and ensuring label consistency. However none
+of these proposed segmentation methods generate a probabilistic output with a measure of model uncertainty.
+Neural networks which model uncertainty are known as
+Bayesian neural networks [9, 26]. They offer a probabilistic
+interpretation of deep learning models by inferring distributions over the networks weights. They are often computationally very expensive, increasing the number of model
+parameters without increasing model capacity significantly.
+Performing inference in Bayesian neural networks is a difficult task, and approximations to the model posterior are
+often used, such as variational inference [14].
+On the other hand, the already significant parameterization of convolutional network architectures leaves them particularly susceptible to over-fitting without large amounts of
+training data. A technique known as dropout is commonly
+used as a regularizer in convolutional neural networks to
+prevent overfitting and co-adaption of features [36]. During
+training with stochastic gradient descent, dropout randomly
+removes units within a network. By doing this it samples
+from a number of thinned networks with reduced width. At
+test time, standard dropout approximates the effect of averaging the predictions of all these thinnned networks by using the weights of the unthinned network. This is referred
+to as weight averaging.
+Gal and Ghahramani [13] have cast dropout as approximate Bayesian inference over the network’s weights. [12]
+shows that dropout can be used at test time to impose
+a Bernoulli distribution over the convolutional net filter’s
+weights, without requiring any additional model parameters. This is achieved by sampling the network with randomly dropped out units at test time. We can consider these
+as Monte Carlo samples obtained from the posterior distribution over models. This technique has seen success in
+modelling uncertainty for camera relocalisation [19]. Here
+we apply it to pixel-wise semantic segmentation.
+We note that the probability distribution from Monte
+Carlo sampling is significantly different to the ‘probabilities’ obtained from a softmax classifier. The softmax function approximates relative probabilities between the class
+labels, but not an overall measure of the model’s uncertainty
+[13]. Figure 3 illustrates these differences.
+
+3. SegNet Architecture
+We briefly review the SegNet architecture [3] which we
+modify to produce Bayesian SegNet. SegNet is a deep
+convolutional encoder decoder architecture which consists
+of a sequence of non-linear processing layers (encoders)
+and a corresponding set of decoders followed by a pixelwise classifier. Typically, each encoder consists of one
+or more convolutional layers with batch normalisation and
+a ReLU non-linearity, followed by non-overlapping maxpooling and sub-sampling. The sparse encoding due to the
+
+Convolutional Encoder-Decoder
+
+Input
+
+Stochastic Dropout
+Samples
+mean
+
+Segmentation
+
+Model Uncertainty
+variance
+
+RGB Image
+
+Conv + Batch Normalisation + ReLU
+Dropout
+Pooling/Upsampling
+
+Softmax
+
+Figure 2: A schematic of the Bayesian SegNet architecture. This diagram shows the entire pipeline for the system which is trained
+end-to-end in one step with stochastic gradient descent. The encoders are based on the 13 convolutional layers of the VGG-16 network
+[34], with the decoder placing them in reverse. The probabilistic output is obtained from Monte Carlo samples of the model with dropout
+at test time. We take the variance of these softmax samples as the model uncertainty for each class.
+
+pooling process is upsampled in the decoder using the maxpooling indices in the encoding sequence. This has the important advantage of retaining class boundary details in the
+segmented images and also reducing the total number of
+model parameters. The model is trained end to end using
+stochastic gradient descent.
+We take both SegNet [3] and a smaller variant termed
+SegNet-Basic [2] as our base models. SegNet’s encoder is
+based on the 13 convolutional layers of the VGG-16 network [34] followed by 13 corresponding decoders. SegNetBasic is a much smaller network with only four layers each
+for the encoder and decoder with a constant feature size of
+64. We use SegNet-Basic as a smaller model for our analysis since it conceptually mimics the larger architecture.
+
+4. Bayesian SegNet
+The technique we use to form a probabilistic encoderdecoder architecture is dropout [36], which we use as approximate inference in a Bayesian neural network [12]. We
+can therefore consider using dropout as a way of getting
+samples from the posterior distribution of models. Gal and
+Ghahramani [12] link this technique to variational inference
+in Bayesian convolutional neural networks with Bernoulli
+distributions over the network’s weights. We leverage this
+method to perform probabilistic inference over our segmentation model, giving rise to Bayesian SegNet.
+For Bayesian SegNet we are interested in finding the posterior distribution over the convolutional weights, W, given
+our observed training data X and labels Y.
+p(W | X, Y)
+
+(1)
+
+In general, this posterior distribution is not tractable, therefore we need to approximate the distribution of these
+weights [9]. Here we use variational inference to approximate it [14]. This technique allows us to learn the distribution over the network’s weights, q(W), by minimising
+
+the Kullback-Leibler (KL) divergence between this approximating distribution and the full posterior;
+KL(q(W) || p(W | X, Y)).
+
+(2)
+
+Here, the approximating variational distribution q(Wi ) for
+every K × K dimensional convolutional layer i, with units
+j, is defined as:
+bi,j ∼ Bernoulli(pi ) for j = 1, ..., Ki ,
+Wi = Mi diag(bi ),
+
+(3)
+
+with bi vectors of Bernoulli distributed random variables
+and variational parameters Mi we obtain the approximate
+model of the Gaussian process in [12]. The dropout probabilities, pi , could be optimised. However we fix them to the
+standard probability of dropping a connection as 50%, i.e.
+pi = 0.5 [36].
+In [12] it was shown that minimising the cross entropy
+loss objective function has the effect of minimising the
+Kullback-Leibler divergence term. Therefore training the
+network with stochastic gradient descent will encourage the
+model to learn a distribution of weights which explains the
+data well while preventing over-fitting.
+We train the model with dropout and sample the posterior distribution over the weights at test time using dropout
+to obtain the posterior distribution of softmax class probabilities. We take the mean of these samples for our segmentation prediction and use the variance to output model
+uncertainty for each class. We take the mean of the per class
+variance measurements as an overall measure of model uncertainty. We also explored using the variation ratio as
+a measure of uncertainty (i.e. the percentage of samples
+which agree with the class prediction) however we found
+this to qualitatively produce a more binary measure of
+model uncertainty. Fig. 2 shows a schematic of the segmentation prediction and model uncertainty estimate process.
+
+(a) Input Image
+
+(b) Semantic Segmentation (c) Softmax Uncertainty
+Car Class
+
+(d) Dropout Uncertainty
+Car Class
+
+(e) Dropout Uncertainty
+All Classes
+
+Figure 3: Comparison of uncertainty with Monte Carlo dropout and uncertainty from softmax regression (c-e: darker colour
+represents larger value). This figure shows that softmax regression is only capable of inferring relative probabilities between classes. In
+contrast, dropout uncertainty can produce an estimate of absolute model uncertainty.
+
+Weight
+Averaging
+Probabilistic Variants
+G
+C I/U
+No Dropout
+82.9 62.4 46.4
+Dropout Encoder
+80.6 68.9 53.4
+82.4 64.5 48.8
+Dropout Decoder
+Dropout Enc-Dec
+79.9 69.0 54.2
+Dropout Central Enc-Dec 81.1 70.6 55.7
+Dropout Center
+82.9 68.9 53.1
+Dropout Classifier
+84.2 62.6 46.9
+
+Monte Carlo
+Sampling
+G
+C I/U
+n/a n/a n/a
+81.6 69.4 54.0
+82.6 62.4 46.1
+79.8 68.8 54.0
+81.6 70.6 55.8
+82.7 68.9 53.2
+84.2 62.6 46.8
+
+Training
+Fit
+G
+C I/U
+94.7 96.2 92.7
+90.6 92.5 86.3
+94.6 96.0 92.4
+88.9 89.0 80.6
+90.4 92.3 85.9
+93.3 95.4 91.2
+94.9 96.0 92.3
+
+Table 1: Architecture Variants for SegNet-Basic on the
+CamVid dataset [4]. We compare the performance of weight
+averaging against 50 Monte Carlo samples. We quantify performance with three metrics; global accuracy (G), class average accuracy (C) and intersection over union (I/U). Results are shown as
+percentages (%). We observe that dropping out every encoder and
+decoder is too strong a regulariser and results in a lower training
+fit. The optimal result across all classes is when only the central
+encoder and decoders are dropped out.
+
+4.1. Probabilistic Variants
+A fully Bayesian network should be trained with dropout
+after every convolutional layer. However we found in practice that this was too strong a regulariser, causing the network to learn very slowly. We therefore explored a number
+of variants that have different configurations of Bayesian
+or deterministic encoder and decoder units. We note that
+an encoder unit contains one or more convolutional layers
+followed by a max pooling layer. A decoder unit contains
+one or more convolutional layers followed by an upsampling layer. The variants are as follows:
+• Bayesian Encoder. In this variant we insert dropout
+after each encoder unit.
+• Bayesian Decoder. In this variant we insert dropout
+after each decoder unit.
+• Bayesian Encoder-Decoder. In this variant we insert
+dropout after each encoder and decoder unit.
+• Bayesian Center. In this variant we insert dropout after the deepest encoder, between the encoder and decoder stage.
+• Bayesian Central Four Encoder-Decoder. In this
+
+variant we insert dropout after the central four encoder
+and decoder units.
+• Bayesian Classifier. In this variant we insert dropout
+after the last decoder unit, before the classifier.
+For analysis we use the smaller eight layer SegNet-Basic
+architecture [3] and test these Bayesian variants on the
+CamVid dataset [4]. We observe qualitatively that all four
+variants produce similar looking model uncertainty output.
+That is, they are uncertain near the border of segmentations
+and with visually ambiguous objects, such as cyclist and
+pedestrian classes. However, Table 1 shows a difference in
+quantitative segmentation performance.
+We observe using dropout after all the encoder and decoder units results in a lower training fit and poorer test performance as it is too strong a regulariser on the model. We
+find that dropping out half of the encoder or decoder units
+is the optimal configuration. The best configuration is dropping out the deepest half of the encoder and decoder units.
+We therefore benchmark our Bayesian SegNet results on
+the Central Enc-Dec variant. For the full 26 layer Bayesian
+SegNet, we add dropout to the central six encoders and decoders. This is illustrated in Fig. 2.
+In the lower layers of convolutional networks basic features are extracted, such as edges and corners [41]. These
+results show that applying Bayesian weights to these layers does not result in a better performance. We believe
+this is because these low level features are consistent across
+the distribution of models because they are better modelled
+with deterministic weights. However, the higher level features that are formed in the deeper layers, such as shape and
+contextual relationships, are more effectively modelled with
+Bayesian weights.
+
+4.2. Comparing Weight Averaging and Monte Carlo
+Dropout Sampling
+Monte Carlo dropout sampling qualitatively allows us to
+understand the model uncertainty of the result. However,
+for segmentation, we also want to understand the quantitative difference between sampling with dropout and using
+the weight averaging technique proposed by [36]. Weight
+
+60.5
+77.8
+
+22.5
+24.7
+
+0.05
+17.9
+47.6
+37.5
+31.4
+49.4
+
+4.13
+1.7
+14.3
+44.8
+36.6
+27.8
+
+12.4
+70.0
+81.5
+74.1
+74.0
+84.8
+
+0.07
+19.4
+33.9
+16.0
+42.5
+30.7
+
+44.9
+64.5
+
+52.9
+50.8
+
+79.1
+91.7
+
+69.6
+54.6
+
+Mean I/U
+
+75.1
+80.4
+
+0.7
+25.8
+
+Global avg.
+
+80.7
+87.0
+81.5
+75.0
+80.6
+88.0
+
+46.6
+37.6
+
+Class avg.
+
+89.5 53.6
+92.9 49.5
+n/a
+n/a
+61.5 88.8 16.4
+n/a
+98.0 1.09
+67.1 96.9 62.7 30.1 95.9 14.7
+76.6 96.2 78.7 40.2 93.9 43.0
+84.6 91.2 82.7 36.9 93.3 55.0
+72.0 93.0 78.5 21.0 94.0 62.5
+87.3 92.3 80.0 29.5 97.6 57.2
+n/a
+n/a
+n/a
+Bayesian SegNet Models in this work:
+68.8 91.4 77.7 52.0 92.5 71.5
+85.5 90.1 86.4 67.9 93.8 73.8
+
+Bicyclist
+
+42.9
+58.5
+
+Side-walk
+
+Sign-Symbol
+
+68.6
+71.1
+
+Column-Pole
+
+Car
+
+89.7
+91.1
+
+Pedestrian
+
+Sky
+
+61.9
+67.3
+
+Road
+
+Tree
+
+46.2
+61.9
+
+Fence
+
+Bayesian SegNet-Basic
+Bayesian SegNet
+
+Building
+
+Method
+SfM+Appearance [5]
+Boosting [37]
+Structured Random Forests [20]
+Neural Decision Forests [29]
+Local Label Descriptors [39]
+Super Parsing [38]
+Boosting+Detectors+CRF [22]
+SegNet-Basic (layer-wise training [2])
+SegNet-Basic [3]
+SegNet [3]
+FCN 8 [25]
+DeconvNet [27]
+DeepLab-LargeFOV-DenseCRF [6]
+
+53.0
+59.8
+51.4
+56.1
+36.3
+51.2
+62.5
+62.9
+62.3
+65.9
+64.2
+62.1
+60.7
+
+69.1
+76.4
+72.5
+82.1
+73.6
+83.3
+83.8
+84.3
+82.8
+88.6
+83.1
+85.9
+89.7
+
+n/a
+n/a
+n/a
+n/a
+n/a
+n/a
+n/a
+n/a
+46.3
+50.2
+52.0
+48.9
+54.7
+
+70.5
+76.3
+
+81.6
+86.9
+
+55.8
+63.1
+
+Table 2: Quantitative results on CamVid [4] consisting of 11 road scene categories. Bayesian SegNet outperforms all other methods,
+including shallow methods which utilise depth, video and/or CRF’s, and more contemporary deep methods. Particularly noteworthy are
+the significant improvements in accuracy for the smaller/thinner classes.
+
+81
+80.5
+80
+79.5
+79
+0
+
+computed in parallel on a GPU this cost can be reduced for
+practical applications.
+
+87.5
+
+Monte Carlo Dropout Sampling
+Weight Averaging
+10
+
+20
+
+30
+
+40
+
+Number of Samples
+
+50
+
+(a) SegNet Basic
+
+60
+
+Global Accuracy (%)
+
+Global Accuracy (%)
+
+82
+81.5
+
+87
+
+86.5
+
+4.3. Training and Inference
+
+86
+
+85.5
+
+85
+0
+
+Monte Carlo Dropout Sampling
+Weight Averaging
+10
+
+20
+
+30
+
+40
+
+Number of Samples
+
+50
+
+60
+
+(b) SegNet
+
+Figure 4: Global segmentation accuracy against number of
+Monte Carlo samples for both SegNet and SegNet-Basic. Results averaged over 5 trials, with two standard deviation error bars,
+are shown for the CamVid dataset. This shows that Monte Carlo
+sampling outperforms the weight averaging technique after approximately 6 samples. Monte Carlo sampling converges after
+around 40 samples with no further significant improvement beyond this point.
+
+averaging proposes to remove dropout at test time and scale
+the weights proportionally to the dropout percentage. Fig.
+4 shows that Monte Carlo sampling with dropout performs
+better than weight averaging after approximately 6 samples.
+We also observe no additional performance improvement
+beyond approximately 40 samples. Therefore the weight
+averaging technique produces poorer segmentation results,
+in terms of global accuracy, in addition to being unable to
+provide a measure of model uncertainty. However, sampling comes at the expense of inference time, but when
+
+Following [3] we train SegNet with median frequency
+class balancing using the formula proposed by Eigen and
+Fergus [10]. We use batch normalisation layers after every convolutional layer [17]. We compute batch normalisation statistics across the training dataset and use these at
+test time. We experimented with computing these statistics
+while using dropout sampling. However we experimentally
+found that computing them with weight averaging produced
+better results.
+We implement Bayesian SegNet using the Caffe library
+[18] and release the source code and trained models for public evaluation 1 . We train the whole system end-to-end using stochastic gradient descent with a base learning rate of
+0.001 and weight decay parameter equal to 0.0005. We train
+the network until convergence when we observe no further
+reduction in training loss.
+
+5. Experiments
+We quantify the performance of Bayesian SegNet on
+three different benchmarks using our Caffe implementation. Through this process we demonstrate the efficacy of
+Bayesian SegNet for a wide variety of scene segmentation
+tasks which have practical applications. CamVid [4] is a
+1 An online demo and source code can be found on our project webpage
+mi.eng.cam.ac.uk/projects/segnet/
+
+Method
+
+G
+
+C
+
+I/U
+
+n/a
+68.2
+66.1
+67.0
+70.3
+71.2
+
+9.3
+38.4
+32.3
+33.0
+35.6
+45.9
+
+n/a
+27.4
+22.6
+24.1
+22.1
+30.7
+
+n/a
+n/a
+
+10.0
+36.3
+
+n/a
+n/a
+
+RGB
+Liu et al. [24]
+FCN 8 [25]
+DeconvNet [27]
+DeepLab-LargeFOV-DenseCRF [6]
+SegNet [3]
+Bayesian SegNet (this work)
+RGB-D
+Liu et al. [24]
+Ren et. al [28]
+
+Table 3: SUN Indoor Scene Understanding. Quantitative comparison on the SUN RGB-D dataset [35] which consists of 5050
+test images of indoor scenes with 37 classes. SegNet RGB based
+predictions have a high global accuracy and out-perform all previous benchmarks, including those which use depth modality.
+
+road scene understanding dataset which has applications for
+autonomous driving. SUN RGB-D [35] is a very challenging and large dataset of indoor scenes which is important
+for domestic robotics. Finally, Pascal VOC 2012 [11] is a
+RGB dataset for object segmentation.
+
+5.1. CamVid
+CamVid is a road scene understanding dataset with 367
+training images and 233 testing images of day and dusk
+scenes [4]. The challenge is to segment 11 classes such as
+road, building, cars, pedestrians, signs, poles, side-walk etc.
+We resize images to 360x480 pixels for training and testing
+of our system.
+Table 2 shows our results and compares them to previous
+benchmarks. We compare to methods which utilise depth
+and motion cues. Additionally we compare to other prominent deep learning architectures. Bayesian SegNet obtains
+the highest overall class average and mean intersection over
+union score by a significant margin. We set a new benchmark on 7 out of the 11 classes. Qualitative results can be
+viewed in Fig. 5.
+
+5.2. Scene Understanding (SUN)
+SUN RGB-D [35] is a very challenging and large dataset
+of indoor scenes with 5285 training and 5050 testing images. The images are captured by different sensors and
+hence come in various resolutions. The task is to segment
+37 indoor scene classes including wall, floor, ceiling, table,
+chair, sofa etc. This task is difficult because object classes
+come in various shapes, sizes and in different poses with
+frequent partial occlusions. These factors make this one of
+the hardest segmentation challenges. For our model, we resize the input images for training and testing to 224x224
+pixels. Note that we only use RGB input to our system.
+
+Method
+
+G
+RGB
+FCN-32s RGB [25]
+60.0
+SegNet [3]
+66.1
+Bayesian SegNet (this work) 68.0
+RGB-D
+Gupta et al. [15]
+60.3
+FCN-32s RGB-D [25]
+61.5
+Eigen et al. [10]
+65.6
+RGB-HHA
+FCN-16s RGB-HHA [25]
+65.4
+
+C
+
+I/U
+
+42.2
+36.0
+45.8
+
+29.2
+23.6
+32.4
+
+42.4
+45.1
+
+28.6
+30.5
+-
+
+46.1
+
+34.0
+
+Table 4: NYU v2. Results for the NYUv2 RGB-D dataset [33]
+which consists of 654 test images. Bayesian SegNet is the top
+performing RGB method.
+
+Parameters Pascal VOC Test IoU
+Method
+(Millions) Non-Bayesian Bayesian
+Dilation Network [40] 140.8
+71.3
+73.1
+FCN-8 [25]
+134.5
+62.2
+65.4
+SegNet [3]
+29.45
+59.1
+60.5
+Table 5: Pascal VOC12 [11] test results evaluated from the online
+evaluation server. We compare to competing deep learning architectures. Bayesian SegNet is considerably smaller but achieves a
+competitive accuracy to other methods. We also evaluate FCN
+[25] and Dilation Network (front end) [40] with Monte Carlo
+dropout sampling. We observe an improvement in segmentation
+performance across all three deep learning models when using
+the Bayesian approach. This demonstrates this method’s applicability in general. Additional results available on the leaderboard
+host.robots.ox.ac.uk:8080/leaderboard
+
+Using the depth modality would necessitate architectural
+modifications and careful post-processing to fill-in missing
+depth measurements. This is beyond the scope of this paper.
+Table 3 shows our results on this dataset compared to
+other methods. Bayesian SegNet outperforms all previous
+benchmarks, including those which use depth modality. We
+also note that an earlier benchmark dataset, NYUv2 [33],
+is included as part of this dataset, and Table 4 shows our
+evaluation on this subset. Qualitative results can be viewed
+in Fig. 6.
+
+5.3. Pascal VOC
+The Pascal VOC12 segmentation challenge [11] consists
+of segmenting a 20 salient object classes from a widely
+varying background class. For our model, we resize the
+input images for training and testing to 224x224 pixels. We
+train on the 12031 training images and 1456 testing images,
+with scores computed remotely on a test server. Table 5
+shows our results compared to other methods, with qualitative results in Fig. 9.
+
+Figure 5: Bayesian SegNet results on CamVid road scene understanding dataset [4]. The top row is the input image, with the ground
+truth shown in the second row. The third row shows Bayesian SegNet’s segmentation prediction, with overall model uncertainty, averaged
+across all classes, in the bottom row (with darker colours indicating more uncertain predictions). In general, we observe high quality
+segmentation, especially on more difficult classes such as poles, people and cyclists. Where SegNet produces an incorrect class label we
+often observe a high model uncertainty.
+
+Figure 6: Bayesian SegNet results on the SUN RGB-D indoor scene understanding dataset [35]. The top row is the input image, with
+the ground truth shown in the second row. The third row shows Bayesian SegNet’s segmentation prediction, with overall model uncertainty,
+averaged across all classes, in the bottom row (with darker colours indicating more uncertain predictions). Bayesian SegNet uses only RGB
+input and is able to accurately segment 37 classes in this challenging dataset. Note that often parts of an image do not have ground truth
+labels and these are shown in black colour.
+
+Percentile
+Confidence
+90
+50
+10
+0
+
+Pixel-Wise Classification Accuracy
+CamVid
+SUN RGBD
+99.7
+97.6
+98.5
+92.3
+89.5
+79.0
+86.7
+75.4
+
+Table 6: Bayesian SegNets accuracy as a function of confidence
+for the 90th percentile (10% most confident pixels) through to the
+0th percentile (all pixels). This shows uncertainty is an effective
+measure of prediction accuracy.
+
+This dataset is unlike the segmentation for scene understanding benchmarks described earlier which require learning both classes and their spatial context. A number of techniques have been proposed based on this challenge which
+are increasingly more accurate and complex 2 . Our efforts
+in this benchmarking experiment have not been diverted
+towards attaining the top rank by either using multi-stage
+training [25], other datasets for pre-training such as MSCOCO [23], training and inference aids such as object proposals [27] or post-processing using CRF based methods
+[6, 42]. Although these supporting techniques clearly have
+value towards increasing the performance it unfortunately
+does not reveal the true performance of the deep architecture which is the core segmentation engine. It however does
+indicate that some of the large deep networks are difficult to
+train end-to-end on this task even with pre-trained encoder
+weights. Therefore, to encourage more controlled benchmarking, we trained Bayesian SegNet end-to-end without
+other aids and report this performance.
+
+5.4. General Applicability
+To demonstrate the general applicability of this method,
+we also apply it to other deep learning architectures trained
+with dropout; FCN [25] and Dilation Network [40]. We
+select these state-of-the-art methods as they are already
+trained by their respective authors using dropout. We take
+their trained open source models off the shelf, and evaluate them using 50 Monte Carlo dropout samples. Table 5
+shows the mean IoU result of these methods evaluated as
+Bayesian Neural Networks, as computed by the online evaluation server.
+This shows the general applicability of our method. By
+leveraging this underlying Bayesian framework our method
+obtains 2-3% improvement across this range of architectures.
+2 See the full leader board at http://host.robots.ox.ac.uk:
+8080/leaderboard
+
+Figure 7: Bayesian SegNet performance compared to mean
+model uncertainty for each class in CamVid road scene understanding dataset. This figure shows that there is a strong inverse relationship between class accuracy and model uncertainty.
+It shows that the classes that Bayesian SegNet performs better at,
+such as Sky and Road, it is also more confident at. Conversely,
+for the more difficult classes such as Sign Symbol and Bicyclist,
+Bayesian SegNet has a much higher model uncertainty.
+
+5.5. Understanding Model Uncertainty
+Qualitative observations. Fig. 5 shows segmentations
+and model uncertainty results from Bayesian SegNet on
+CamVid Road Scenes [4]. Fig. 6 shows SUN RGB-D Indoor Scene Understanding [35] results and Fig. 9 has Pascal
+VOC [11] results. These figures show the qualitative performance of Bayesian SegNet. We observe that segmentation
+predictions are smooth, with a sharp segmentation around
+object boundaries. These results also show that when the
+model predicts an incorrect label, the model uncertainty is
+generally very high. More generally, we observe that a high
+model uncertainty is predominantly caused by three situations.
+Firstly, at class boundaries the model often displays a
+high level of uncertainty. This reflects the ambiguity surrounding the definition of defining where these labels transition. The Pascal results clearly illustrated this in Fig. 9.
+Secondly, objects which are visually difficult to identify
+often appear uncertain to the model. This is often the case
+when objects are occluded or at a distance from the camera.
+The third situation causing model uncertainty is when
+the object appears visually ambiguous to the model. As an
+example, cyclists in the CamVid results (Fig. 5) are visually
+similar to pedestrians, and the model often displays uncertainty around them. We observe similar results with visually
+similar classes in SUN (Fig. 6) such as chair and sofa, or
+bench and table. In Pascal this is often observed between
+cat and dog, or train and bus classes.
+Quantitative observations. To understand what causes
+the model to be uncertain, we have plotted the relationship
+between uncertainty and accuracy in Fig. 7 and between
+uncertainty and the frequency of each class in the dataset in
+
+Bathtub
+Bag
+
+Toilet
+Sink
+Lamp
+
+Towel
+Shower curtain
+Box
+Whiteboard
+Person
+Night stand
+
+TV
+Paper
+
+86.6
+92.0
+52.4
+68.4
+76.0
+54.3
+59.3
+37.4
+53.8
+29.2
+49.7
+32.5
+31.2
+17.8
+5.3
+53.2
+28.8
+36.5
+29.6
+0.0
+14.4
+67.7
+32.4
+10.2
+18.3
+19.2
+11.5
+0.0
+8.9
+38.7
+4.9
+22.6
+55.6
+52.7
+27.9
+29.9
+8.1
+
+Books
+Fridge
+
+SegNet [3]
+Bayesian SegNet
+
+80.2
+90.9
+58.9
+64.8
+76.0
+58.6
+62.6
+47.7
+66.4
+31.2
+63.6
+33.8
+46.7
+19.7
+16.2
+67.0
+42.3
+57.1
+39.1
+0.1
+24.4
+84.0
+48.7
+21.3
+49.5
+30.6
+18.8
+0.1
+24.1
+56.8
+17.9
+42.9
+73.0
+66.2
+48.8
+45.1
+24.1
+
+Wall
+Floor
+Cabinet
+Bed
+Chair
+Sofa
+Table
+Door
+Window
+Bookshelf
+Picture
+Counter
+Blinds
+Desk
+Shelves
+Curtain
+Dresser
+Pillow
+Mirror
+Floor Mat
+Clothes
+Ceiling
+
+Figure 9: Bayesian SegNet results on the Pascal VOC 2012 dataset [11]. The top row is the input image. The middle row shows
+Bayesian SegNet’s segmentation prediction, with overall model uncertainty averaged across all classes in the bottom row (darker colours
+indicating more uncertain predictions). Ground truth is not publicly available for these test images.
+
+Table 7: Class accuracy of Bayesian SegNet predictions for the 37 indoor scene classes in the SUN RGB-D benchmark dataset [35].
+
+Fig. 8. Uncertainty is calculated as the mean uncertainty
+value for each pixel of that class in a test dataset. We observe an inverse relationship between uncertainty and class
+accuracy or class frequency. This shows that the model is
+more confident about classes which are easier or occur more
+often, and less certain about rare and challenging classes.
+Additionally, Table 6 shows segmentation accuracies for
+varying levels of confidence. We observe very high levels
+of accuracy for values of model uncertainty above the 90th
+percentile across each dataset. This demonstrates that the
+model’s uncertainty is an effective measure of confidence
+in prediction.
+
+5.6. Real Time Performance
+Table 5 shows that SegNet and Bayesian SegNet maintains a far lower parameterisation than its competitors.
+Monte Carlo sampling requires additional inference time,
+however if model uncertainty is not required, then the
+weight averaging technique can be used to remove the need
+for sampling (Fig. 4 shows the performance drop is modest). Our implementation can run SegNet at 35ms per frame
+
+and Bayesian SegNet with 10 Monte Carlo samples at 90ms
+per frame on Titan X GPU. However inference time will depend on the implementation.
+
+6. Conclusions
+We have presented Bayesian SegNet, the first probabilistic framework for semantic segmentation using deep learning, which outputs a measure of model uncertainty for each
+class. We show that the model is uncertain at object boundaries and with difficult and visually ambiguous objects. We
+quantitatively show Bayesian SegNet produces a reliable
+measure of model uncertainty and is very effective when
+modelling smaller datasets. Bayesian SegNet outperforms
+shallow architectures which use motion and depth cues, and
+other deep architectures. We obtain the highest performing result on CamVid road scenes and SUN RGB-D indoor
+scene understanding datasets. We show that the segmentation model can be run in real time on a GPU. For future
+work we intend to explore how video data can improve our
+model’s scene understanding performance.
+
+Figure 8: Bayesian SegNet class frequency compared to mean
+model uncertainty for each class in CamVid road scene understanding dataset. This figure shows that there is a strong inverse relationship between model uncertainty and the frequency at
+which a class label appears in the dataset. It shows that the classes
+that Bayesian SegNet is more confident at are more prevalent in
+the dataset. Conversely, for the more rare classes such as Sign
+Symbol and Bicyclist, Bayesian SegNet has a much higher model
+uncertainty.
+
+References
+[1] V. Badrinarayanan, F. Galasso, and R. Cipolla. Label propagation
+in video sequences. In Computer Vision and Pattern Recognition
+(CVPR), 2010 IEEE Conference on, pages 3265–3272. IEEE, 2010.
+2
+[2] V. Badrinarayanan, A. Handa, and R. Cipolla. Segnet: A deep convolutional encoder-decoder architecture for robust semantic pixel-wise
+labelling. arXiv preprint arXiv:1505.07293, 2015. 3, 5
+[3] V. Badrinarayanan, A. Kendall, and R. Cipolla. Segnet: A deep
+convolutional encoder-decoder architecture for image segmentation.
+arXiv preprint arXiv:1511.00561, 2015. 2, 3, 4, 5, 6, 9
+[4] G. J. Brostow, J. Fauqueur, and R. Cipolla. Semantic object classes in
+video: A high-definition ground truth database. Pattern Recognition
+Letters, 30(2):88–97, 2009. 1, 2, 4, 5, 6, 7, 8
+[5] G. J. Brostow, J. Shotton, J. Fauqueur, and R. Cipolla. Segmentation and recognition using structure from motion point clouds. In
+Computer Vision–ECCV 2008, pages 44–57. Springer, 2008. 5
+[6] L.-C. Chen, G. Papandreou, I. Kokkinos, K. Murphy, and A. L.
+Yuille. Semantic image segmentation with deep convolutional nets
+and fully connected crfs. arXiv preprint arXiv:1412.7062, 2014. 2,
+5, 6, 8
+[7] D. A. Cohn, Z. Ghahramani, and M. I. Jordan. Active learning with
+statistical models. Journal of artificial intelligence research, 1996. 2
+[8] C. Couprie, C. Farabet, L. Najman, and Y. LeCun. Indoor semantic segmentation using depth information. arXiv preprint
+arXiv:1301.3572, 2013. 1
+[9] J. Denker and Y. Lecun. Transforming neural-net output levels to
+probability distributions. In Advances in Neural Information Processing Systems 3. Citeseer, 1991. 2, 3
+[10] D. Eigen and R. Fergus. Predicting depth, surface normals and semantic labels with a common multi-scale convolutional architecture.
+arXiv preprint arXiv:1411.4734, 2014. 5, 6
+[11] M. Everingham, L. Van Gool, C. K. Williams, J. Winn, and A. Zisserman. The pascal visual object classes (voc) challenge. International
+journal of computer vision, 88(2):303–338, 2010. 1, 6, 8, 9
+[12] Y. Gal and Z. Ghahramani. Bayesian convolutional neural networks
+with bernoulli approximate variational inference. arXiv:1506.02158,
+2015. 2, 3
+
+[13] Y. Gal and Z. Ghahramani. Dropout as a Bayesian approximation:
+Representing model uncertainty in deep learning. arXiv:1506.02142,
+2015. 2
+[14] A. Graves. Practical variational inference for neural networks. In
+Advances in Neural Information Processing Systems, pages 2348–
+2356, 2011. 2, 3
+[15] S. Gupta, R. Girshick, P. Arbeláez, and J. Malik. Learning rich features from rgb-d images for object detection and segmentation. In
+Computer Vision–ECCV 2014, pages 345–360. Springer, 2014. 6
+[16] B. Hariharan, P. Arbeláez, R. Girshick, and J. Malik. Hypercolumns
+for object segmentation and fine-grained localization. arXiv preprint
+arXiv:1411.5752, 2014. 2
+[17] S. Ioffe and C. Szegedy. Batch normalization: Accelerating deep
+network training by reducing internal covariate shift. arXiv preprint
+arXiv:1502.03167, 2015. 5
+[18] Y. Jia, E. Shelhamer, J. Donahue, S. Karayev, J. Long, R. Girshick,
+S. Guadarrama, and T. Darrell. Caffe: Convolutional architecture for
+fast feature embedding. arXiv preprint arXiv:1408.5093, 2014. 5
+[19] A. Kendall and R. Cipolla. Modelling uncertainty in deep learning
+for camera relocalization. arXiv preprint arXiv:1509.05909, 2015. 2
+[20] P. Kontschieder, S. Rota Buló, H. Bischof, and M. Pelillo. Structured
+class-labels in random forests for semantic image labelling. In Computer Vision (ICCV), 2011 IEEE International Conference on, pages
+2190–2197. IEEE, 2011. 5
+[21] A. Krizhevsky, I. Sutskever, and G. E. Hinton. Imagenet classification with deep convolutional neural networks. In Advances in neural
+information processing systems, pages 1097–1105, 2012. 2
+[22] L. Ladickỳ, P. Sturgess, K. Alahari, C. Russell, and P. H. Torr. What,
+where and how many? combining object detectors and crfs. In Computer Vision–ECCV 2010, pages 424–437. Springer, 2010. 5
+[23] T.-Y. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan,
+P. Dollár, and C. L. Zitnick. Microsoft coco: Common objects in
+context. In Computer Vision–ECCV 2014, pages 740–755. Springer,
+2014. 8
+[24] C. Liu, J. Yuen, A. Torralba, J. Sivic, and W. T. Freeman. Sift flow:
+Dense correspondence across different scenes. In Computer Vision–
+ECCV 2008, pages 28–42. Springer, 2008. 6
+[25] J. Long, E. Shelhamer, and T. Darrell. Fully convolutional networks
+for semantic segmentation. arXiv preprint arXiv:1411.4038, 2014.
+1, 2, 5, 6, 8
+[26] D. J. MacKay. A practical bayesian framework for backpropagation
+networks. Neural computation, 4(3):448–472, 1992. 2
+[27] H. Noh, S. Hong, and B. Han. Learning deconvolution network for
+semantic segmentation. arXiv preprint arXiv:1505.04366, 2015. 2,
+5, 6, 8
+[28] X. Ren, L. Bo, and D. Fox. Rgb-(d) scene labeling: Features and
+algorithms. In Computer Vision and Pattern Recognition (CVPR),
+2012 IEEE Conference on, pages 2759–2766. IEEE, 2012. 6
+[29] S. Rota Bulo and P. Kontschieder. Neural decision forests for semantic image labelling. In Computer Vision and Pattern Recognition
+(CVPR), 2014 IEEE Conference on, pages 81–88. IEEE, 2014. 5
+[30] J. Shotton, M. Johnson, and R. Cipolla. Semantic texton forests for
+image categorization and segmentation. In Computer vision and pattern recognition, 2008. CVPR 2008. IEEE Conference on, pages 1–8.
+IEEE, 2008. 2
+[31] J. Shotton, T. Sharp, A. Kipman, A. Fitzgibbon, M. Finocchio,
+A. Blake, M. Cook, and R. Moore. Real-time human pose recognition in parts from single depth images. Communications of the
+ACM, 56(1):116–124, 2013. 1, 2
+[32] J. Shotton, J. Winn, C. Rother, and A. Criminisi. Textonboost for
+image understanding: Multi-class object recognition and segmentation by jointly modeling texture, layout, and context. International
+Journal of Computer Vision, 81(1):2–23, 2009. 1, 2
+[33] N. Silberman, D. Hoiem, P. Kohli, and R. Fergus. Indoor segmentation and support inference from rgbd images. In Computer Vision–
+ECCV 2012, pages 746–760. Springer, 2012. 6
+
+[34] K. Simonyan and A. Zisserman. Very deep convolutional networks
+for large-scale image recognition. arXiv preprint arXiv:1409.1556,
+2014. 3
+[35] S. Song, S. P. Lichtenberg, and J. Xiao. Sun rgb-d: A rgb-d scene
+understanding benchmark suite. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pages 567–576,
+2015. 1, 2, 6, 7, 8, 9
+[36] N. Srivastava, G. Hinton, A. Krizhevsky, I. Sutskever, and
+R. Salakhutdinov. Dropout: A simple way to prevent neural networks from overfitting. The Journal of Machine Learning Research,
+15(1):1929–1958, 2014. 2, 3, 4
+[37] P. Sturgess, K. Alahari, L. Ladicky, and P. H. Torr. Combining appearance and structure from motion features for road scene understanding. In BMVC, volume 1, page 6, 2009. 5
+[38] J. Tighe and S. Lazebnik. Superparsing. International Journal of
+Computer Vision, 101(2):329–349, 2013. 5
+[39] Y. Yang, Z. Li, L. Zhang, C. Murphy, J. Ver Hoeve, and H. Jiang.
+Local label descriptor for example based semantic image labeling.
+In Computer Vision–ECCV 2012, pages 361–375. Springer, 2012. 5
+[40] F. Yu and V. Koltun. Multi-scale context aggregation by dilated convolutions. In ICLR, 2016. 2, 6, 8
+[41] M. D. Zeiler and R. Fergus. Visualizing and understanding convolutional networks. In Computer Vision–ECCV 2014, pages 818–833.
+Springer, 2014. 4
+[42] S. Zheng, S. Jayasumana, B. Romera-Paredes, V. Vineet, Z. Su,
+D. Du, C. Huang, and P. Torr. Conditional random fields as recurrent neural networks. arXiv preprint arXiv:1502.03240, 2015. 2,
+8
+
+
