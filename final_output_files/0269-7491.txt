@@ -1,0 +1,1043 @@
+ENVIRONMENTAL POLLUTION
+
+AUTHOR INFORMATION PACK
+
+TABLE OF CONTENTS
+
+XXX
+
+.
+
+.
+
+•
+•
+•
+•
+•
+•
+
+Description
+Audience
+Impact Factor
+Abstracting and Indexing
+Editorial Board
+Guide for Authors
+
+p.1
+p.2
+p.2
+p.2
+p.3
+p.6
+ISSN: 0269-7491
+
+DESCRIPTION
+.
+
+Environmental Pollution is an international journal that seeks to publish papers that report results
+from original, novel research that addresses significant environmental pollution issues and problems
+and contribute new knowledge to science.
+The editors welcome high quality papers where the pollutants are clearly defined and measured and
+can be directly related to biological, ecological, and human health effects. This includes air, water, and
+soil pollution and climate change. New techniques for the study and measurement of pollutants and
+their effects are also encouraged as well as papers on new types of environmental challenges such
+as pollution/antibiotic resistances of organisms. Emerging pollutions are of eminent interest, such
+as microplastics, electronic wastes, light or noise pollution as long as they can clearly be related to
+the biological effects mentioned above. Papers must be process-orientated and/or hypotheses-based
+to be considered for population. Papers based on field studies are given priority for publication over
+micro/meso cosmos studies.
+Papers, such as meta analyses, that report findings from re-examination and interpretation of existing
+data are welcome. Modeling papers are welcome only to a certain extent, i.e., they must be related to
+a specific pollution issue or process that is potentially of ecological and/or human health implications.
+Critical review papers and commentaries are also of high interest as are letters to the editor.
+The editors do not wish to publish papers that describe results from routine surveys and monitoring
+programs that are primarily of local or regional interest. Descriptions of well-known pollutants,
+such as legacy pollutants, in yet another location are not of interest. Papers about sewage,
+waste and wastewater treatment and management as well as standard techniques in agronomy,
+remediation, biomonitoring, bioremediation and phytoremediation are not acceptable. However,
+papers on innovative techniques to combat regional or global problems are welcome; however,
+technical studies must show their field applicability.
+Furthermore, the editors discourage submission of papers which describe analytical methods,
+laboratory experiments, food science studies, screening of new plant/animal/microorganism species
+for effect assessments and testing known pollution and chemicals in another setting. Eutrophication
+studies and secondary pollution by eutrophication are not covered by Environmental Pollution. In the
+same line, papers on ocean enrichment by CO2 will not be accepted.
+The abstract (up to 300 words), highlights and conclusions of papers in this journal must contain
+clear and concise statements. A graphical abstract is mandatory. A cover letter must be accompanied
+AUTHOR INFORMATION PACK 13 Apr 2017
+
+www.elsevier.com/locate/envpol
+
+1
+
+with each submission, containing clear and concise statements as to why the study was done and
+how readers will benefit from the results.
+Articles submitted for publication in Environmental Pollution should establish connections among
+research findings with implications for environmental quality, ecological health, and/or human health.
+The cover letter must explicitly express how the submission fits the Aims and Scope of Environmental
+Pollution. Failure to include the paragraph will result in returning the paper to the author.
+The editors welcome the following contributions:
+• Full research papers: Results from completed investigations reporting original and previously
+unpublished work.
+• Short communications: A brief communication of urgent matter or the reporting of preliminary
+findings to be given expedited publication.
+• Review papers: In-depth critical reviews of special subjects. Authors planning reviews should contact
+one of the editors prior to submission.
+• Commentaries: Opinions and concerns about current scientific issues, invited or unsolicited
+• Letters to the Editor: Short focused letters to raise issues or concerns about papers published in
+the journal and solicit a reply from the authors of those papers
+• Special Issues. Special Issues will be published on emerging thematic issues and innovative
+conferences. An Editor or Associate Editor should be contacted early in the conference planning
+process to get approval and for guidelines on special issues of the journal. Furthermore, the Editors
+or Associate Editors will invite leading experts as Guest Editors for Special Issues.
+Editors-in-Chief: D.O. Carpenter & Eddy Y. Zeng
+
+AUDIENCE
+.
+
+Pollution research workers including chemists, toxicologists, environmentalists, conservationists,
+botanists, marine scientists, ecologists, biologists.
+
+IMPACT FACTOR
+.
+
+2015: 4.839 © Thomson Reuters Journal Citation Reports 2016
+
+ABSTRACTING AND INDEXING
+.
+
+AGRICOLA
+Air Pollution Control Association Journal
+Biological and Agricultural Index
+Current Contents/Agriculture, Biology & Environmental Sciences
+MEDLINE®
+EMBASE
+Energy Information Abstracts
+Environmental Periodicals Bibliography
+GeoSciTech
+SCISEARCH
+Science Citation Index
+Scopus
+
+AUTHOR INFORMATION PACK 13 Apr 2017
+
+www.elsevier.com/locate/envpol
+
+2
+
+EDITORIAL BOARD
+.
+
+Co-Editors-in-Chief:
+David Carpenter, State University of New York (SUNY) at Albany, Rensselaer, New York, USA
+Eddy Zeng, Jinan University, Guangzhou, China
+Associate Editors:
+Da Chen, Southern Illinois University at Carbondale, Carbondale, Illinois, USA
+
+Environmental chemistry; Analytical chemistry; Ecotoxicology; Persistent organic pollutants; Flame
+retardants; Pesticides; Mass spectrometry; Gas/liquid chromatography.
+Maria Cristina Fossi, Università di Siena, Siena, Italy
+Kimberly Hageman, University of Otago, Dunedin, New Zealand
+
+Organic Synthesis and Biological Chemistry, Materials and Polymers; Inorganic; Supramolecular and
+Coordination Chemistry, Environmental Chemistry and Geochemistry, Theory and modelling, Physical
+Chemistry and Spectroscopy
+Sarah Harmon, University of South Carolina Aiken, Aiken, South Carolina, USA
+
+Aquatic toxicology; Water pollution; Heavy metals toxicity; Fecal coliform pollution; Mercury toxicity.
+Klaus Kümmerer, Leuphana Universität Lüneburg, Lüneburg, Germany
+Bernd Nowack, Swiss Federal Laboratories for Materials Science and Technology, St. Gall, Switzerland
+Yong Sik Ok, Kangwon National University, Chuncheon, The Republic of Korea
+
+Soil pollution; Soil remediation; Heavy metals in the environment; Waste management; Bioavailability
+of Emerging Contaminant; Bioenergy and value-added products; Biochar and soil organic matter;
+Phytoremediation
+Jörg Rinklebe, University of Wuppertal, Wuppertal, Germany
+
+Soils, sediments, waters, plants, and their pollutions (in particular trace elements and nutrients) and
+linked biogeochemical issues with a special focus in redox chemistry; Remediation of soils and soil
+microbiology
+Frank von Hippel, Northern Arizona University, Flagstaff, Arizona, USA
+
+Perchlorate, OC pesticides, PCBs, PBDEs, PFCs, toxic metals (mercury, manganese, copper, arsenic)
+Ecotoxicology research incorporates molecular (gene expression), organismal (endocrine disruption,
+developmental disruption, behavior), and ecological approaches (stable isotopes) to solve problems in
+conservation biology and environmental health. A critical component of several of my larger research
+projects is community-based participatory research (CBPR) with indigenous people.
+Wen-Xiong Wang, Hong Kong University of Science and Technology, Kowloon, Hong Kong
+
+Metal Pollution, Metal Ecotoxicology, Metal Biogeochemistry, Metal Bioavailability Metal
+bioaccumulation, Metal toxicity, Environmental processes of metals, Bio monitoring, Biomarkers,
+Bioassays.
+Charles Wong, University of Winnipeg, Winnipeg, Manitoba, Canada
+Baoshan Xing, University of Massachusetts, Amherst, Massachusetts, USA
+Editorial Board:
+Dula Amarasiriwardena, Hampshire College, Amherst, Massachusetts, USA
+
+Metal Pollution Environmental trace metal determination (ICP-MS, LA-ICP-MS) Metal chemical
+speciation Toxic metals in soils Tissue level elemental bioimaging Nanoparticles in Environment
+Environmental remediation -metals Humic substances in the environment
+Allen Barker, University of Massachusetts, Amherst, Massachusetts, USA
+Nigel Bell, Imperial College London, Kensington, London, UK
+
+Effects of air pollution on managed and natural ecosystems; radioecology; waste management
+Thomas Borch, Colorado State University, Fort Collins, Colorado, USA
+
+Hydraulic fracturing, emerging contaminants, uranium mining, and carbon sequestration
+Birgit Braune, Carleton University, Ottawa, Ontario, Canada
+
+Arctic, marine ecosystems, birds, metals, organo-compounds, biomonitoring, biological effects
+Juergen Burkhardt , University of Bonn, Germany
+Andrzej Bytnerowicz, U.S. Department of Agriculture (USDA), Forest Service, Riverside, California, USA
+
+Air pollution; monitoring; ozone; atmospheric deposition of nitrogen and sulfur; critical loads; impacts
+of wildland fires on air quality; evaluation of forest health; interactive effects of air pollution and
+climate change on terrestrial ecosystem; ambient air quality standards; passive samplers.
+Art Chappelka, Auburn University, Auburn, Alabama, USA
+
+Air pollution and global climate effects to terrestrial ecosystems; native plant community responses
+(shifts in diversity) to air pollutants and global climate change; plant-stress-air pollution/global
+climate change interactions; urban ecology and ecosystem services
+Thomas Custer, U.S. Geological Survey (USGS), Lacrosse, Wisconsin, USA
+Alessandra De Marco, ENEA Centro Ricerche Casaccia, S. Maria di Galeria, Rome, Italy
+
+AUTHOR INFORMATION PACK 13 Apr 2017
+
+www.elsevier.com/locate/envpol
+
+3
+
+Impacts of air pollution on vegetation, with particular interest on ozone and nitrogen deposition;
+climate change and air pollution interactions and their synergistic impacts on ecosystems; integrated
+assessment modelling for evaluating impacts of policies and measures to reduce air pollution; nitrogen
+cycle and nitrogen budget and their importance in agricultural field
+Marisa Domingos, MutaGen Brasil, Monte Alegre, Ribeirão Preto, Brazil
+
+Environmental pollution and climatic change effects on natural vegetation, particularly in the
+tropics and subtropics Air-plant-soil interactions in polluted terrestrial ecosystems Physiologic,
+metabolic, structural/ultrastructural markers of increased plant tolerance against air pollutants and
+other environmental stressors Disturbances on nutrient dynamics in polluted terrestrial ecosystems
+Physiognomic/landscape disturbances in polluted terrestrial ecosystems The search of innovative
+biomonitoring technics for evaluating risks posed by air pollutants Ozone, nitrogen and sulfur oxides,
+particulate matter, fluorine, trace metals, polycyclic aromatic hydrocarbons
+Juerg Fuhrer, AGROSCOPE, Zurich, Switzerland
+
+Air pollution and climate change effects on crops, plant communities and agroecosystems, greenhouse
+gas fluxes in agricultural systems
+Jiming Hao, Tsinghua University, Beijing, China
+Marcus Hauck, Georg-August Universität Göttingen, Göttingen, Germany
+
+lichen biology epiphyte biology global change biology metals in forest ecosystems
+Magali Houde, Environment Canada, Montreal, Quebec, Canada
+
+Aquatic ecotoxicology, organic pollutants, toxicogenomics, biological effects, zooplankton and fish,
+bioaccumulation, impacts of waste water treatment plant effluent, emerging flame retardants,
+polyfluoroalkyl substances, marine mammals
+Harri Kankaanpaa, Finnish Institute of Marine Research, Helsinki, Finland
+Takayoshi Koike, Hokkaido University, Sapporo, Japan
+
+physiological ecology of woody plants (partly including crops) under changing environment (such as
+elevated ozone, high nitrogen loading, soil acidification, elevated CO2). My interest is to study on
+photosynthesis, respiration, growth, allocation of woody plants and plant-insect interaction.
+Rai Kookana, CSIRO (The Commonwealth Scientific and Industrial Research Organization), Glen Osmond, South
+Australia, Australia
+
+Pesticides, Environment Fate, Pharmaceuticals, Soil science, Fullerene nanomaterials
+Jamie Lead, University of Birmingham, Birmingham, England, UK
+Chunyang Liao, Chinese Academy of Sciences, Yantai, China
+
+Emerging organic contaminants, Endocrine disrupting chemicals, Pesticides, Environmental analytical
+chemistry, Environmental behavior and fate, Bioavailability, Toxicological effects, and Risk assessment
+Daohui Lin, Zhejiang University, Hangzhou, China
+
+aquatic toxicology, heavy metals pollution, constructed wetlands, fecal coliform pollution
+Rainer Lohmann, University of Rhode Island, Narragansett, Rhode Island, USA
+
+Passive samplers; POPs, sorption; bioaccumulation; atmospheric chemistry; marine pollution; longrange transport; oceans; black carbon; organic geochemistry
+Stefano Loppi, Università degli Studi di Siena, Siena, Italy
+Michael Lydy, Southern Illinois University, Carbondale, Illinois, USA
+
+pesticides, toxic effects on aquatic systems, pyrethroid insecticides, bioavailability, desorption-based
+samplers, sediment-associated organic contaminants, honey bees declines
+Shaily Mahendra, University of California at Los Angeles (UCLA), Los Angeles, California, USA
+
+water treatment, environmental microbiology, environmental biotechnology, microbial ecology,
+enzymes, biodegradation, bioremediation, molecular biology, biomarkers, nano toxicology.
+Andy A. Meharg, Queen's University Belfast, Northern Ireland, Belfast, Northern Ireland, UK
+Thomas Meinelt, Institute of Freshwater Ecology and Inland Fisheries, Berlin, Germany
+
+Alternative treatments in aquaculture, Impact (and interaction) of humic substances on environment
+and animals.
+Willie Peijnenburg, Universiteit Leiden, Leiden, Netherlands
+
+Risk assessment; Ecological risk assessment; Environmental fate and effect assessment;
+Nanoparticles; Bioavailability; Metals; Organics; Quantitative Structure-Activity Relationships
+(QSARs); Transformation of chemical substances; Biodegradation; Abiotic transformations
+Elijah J. Petersen, National Institute of Standards and Technology (NIST), Gaithersburg, Maryland, USA
+
+nanomaterials, carbon nanomaterials, standardization, nanoecotoxicity, carbon nanotubes
+Stergios Pirintsos, University of Crete, Iraklion, Crete, Greece
+
+"Biomonitoring of air pollution, trace elements and nitrogen using lichens Climate change issues and
+lichens Lichens and hydrogen production Lichen physiology and pollution Sensitivity issues of lichens
+Lichen diversity and vegetation in Mediterranean Ecosystems"
+Pleijel, Göteborgs Universitet, Göteborg, Sweden
+
+AUTHOR INFORMATION PACK 13 Apr 2017
+
+www.elsevier.com/locate/envpol
+
+4
+
+Ozone (effects on vegetation) Carbon dioxide (effects on vegetation) Urban ecology (especially air
+pollution in relation to vegetation) Temporal and spatial variation in air pollution exposure Crops
+(especially effects of air pollutants on growth and nutrient content) Deposition of air pollutants
+Weather and climate dependence of air pollution Climate change effects on crops
+Markus Puschenreiter, Universitat für Bodenkultur Wien (BOKU), Vienna, Austria
+
+Heavy metals/trace elements in soils and plants, rhizosphere processes involved in metal/trace
+element acquisition, soil remediation technologies / phytoremediation
+Brian Reid, University of East Anglia, Norwich, England, UK
+
+Soil contamination; biochar; pesticides; HOCs; PAHs; PTEs
+Dibyendu Sarkar, Stevens Institute of Technology, Hoboken, New Jersey, USA
+
+Environmental Geochemistry, Soil Chemistry, Environmental Quality and Remediation, Human Health
+Risk Assessment, Green Technology
+Jörg Schaller, Universität Bayreuth, Bayreuth, Germany
+
+Nutrient, silicon and metal(loid) cycling; element fixation during litter decomposition; crop plant
+nutrition and trace element accumulation; invertebrates; silicon effect on metal binding; metal
+toxicity; carbon turnover; silicon turnover; rare earth element; ecosystem processes; silicon nano
+particles
+Wada Shin-Ichiro, Kyushu University, Fukoka, Japan
+Richard Shore, Centre for Ecology and Hydrology (CEH), Bailrigg, Lancaster, UK
+Philip Smith, Texas Tech University, Lubbock, Texas, USA
+
+Ecotoxicology, ecological risk assessment, wildlife toxicology
+
+Stefania Squizzato, Clarkson University, Potsdam, New York, USA
+Jordi Sunyer, CREAL, Barcelona, Spain
+Filip Tack, Universiteit Gent, Gent, Belgium
+
+Heavy metals, trace element biogeochemistry, dredged materials, soil and sediment remediation,
+phytoremediation
+Shu Tao, Peking University, Beijing, China
+Doris Vetterlein, Umweltforschungszentrum (UFZ) Leipzig-Halle GmbH, Halle/Saale, Germany
+Zhenyu Wang, Ocean University of China, Qingduo, China
+
+Environmental geochemistryToxicology
+
+Jason White, Connecticut Agricultural Experimental Station, New Haven, Connecticut, USA
+
+nanotoxicology, food safety, bioremediation and phytoremediation
+Paul Williams, Chinese Academy of Sciences (CAS), Beijing, China
+
+1] Toxic trace elements 2] 2D high-resolution chemical imaging 3] Rhizophere Chemistry/ Soilplant interactions 4] Diffusive Gradients in thin films (DGT) 5] Arsenic/Selenium Biogeochemistry
+6] Bioavailability of metals 7] Human health impacts of arsenic, cadmium and lead 8] Urban &
+Sustainable agriculture 9] Advanced analytical approaches for contaminant quantification 10] Soil &
+Water pollution
+Bert Wolterbeek, Delft University of Technology, Delft, Netherlands
+
+plant physiology, air pollution (methods, effects), (bio)monitoring, radionuclides, kinetics, dynamics,
+metals, radioecology
+Feng Xiao, University of North Dakota, Grand Forks, North Dakota, USA
+
+Perfluorochemicals (PFCs) and perfluoroalkyl substances (PFASs); Perfluorooctanoate (PFOA) and
+perfluorooctane sulfonate (PFOS); Biochar, char, soot, black carbon, and activated carbon; Adsorption;
+Water chemistry; Drinking-water treatment; Emerging contaminants and environmental monitoring;
+Geographic Information System; Exploratory data analysis; Exposure assessment.
+Scott Young, Nottingham, Nottingham, UK
+
+Bioavailability, speciation and mobility of trace metals and radioisotopes in the environment and
+specifically with the geochemical controls over trace element deficiency and toxicity
+Shuzhen Zhang, Chinese Academy of Sciences (CAS), Beijing, China
+
+persistent organic pollutants, bioavailability, plant uptake of organic contaminants, plant uptake
+of nanoparticles, plant uptake of heavy metals, soil accumulation of contaminants, adsorption
+mechanisms of organic contaminants, adsorption mechanisms of heavy metals, synchrotron X-ray
+absorption spectroscopy analysis, metabolism and biotransformation of organic contaminants
+Fangjie Zhao, Nanjing Agricultural University, Nanjing, China
+
+Biogeochemistry of trace elements, uptake and detoxification of heavy metals in plants,
+bioremediation
+
+AUTHOR INFORMATION PACK 13 Apr 2017
+
+www.elsevier.com/locate/envpol
+
+5
+
+GUIDE FOR AUTHORS
+.
+
+Your Paper Your Way
+We now differentiate between the requirements for new and revised submissions. You may choose
+to submit your manuscript as a single Word or PDF file to be used in the refereeing process. Only
+when your paper is at the revision stage, will you be requested to put your paper in to a 'correct
+format' for acceptance and provide the items required for the publication of your article. There are
+no strict formatting requirements but all manuscripts must contain the essential elements needed
+to convey your manuscript, for example Abstract, Keywords, Introduction, Materials and Methods,
+Results, Conclusions, Artwork and Tables with Captions.
+
+Introduction
+Environmental Pollution is an international journal that seeks to publish papers that report results
+from original, novel research that addresses significant environmental pollution issues and problems
+and contribute new knowledge to science.
+The editors welcome high quality papers where the pollutants are clearly defined and measured and
+can be directly related to biological, ecological, and human health effects. This includes air, water,
+and soil pollution and climate change. New techniques for the study and measurement of pollutants
+are also encouraged. Papers, such as meta analyses, that report findings from re-examination and
+interpretation of existing data are welcome Modeling papers are also welcome Critical review papers
+are also of interest as are letters to the editor.
+The editors do not wish to publish papers that describe results from routine surveys and monitoring
+programs that are primarily of local interest. Descriptions of well-known pollutants, such as
+legacy pollutants, in yet another location are not of interest. Papers about sewage, waste and
+wastewater treatment and management, agronomy, remediation, biomonitoring, bioremediation and
+phytoremediation are not acceptable.
+It is unnecessary to ask for permission to the Editor in Chief before submitting manuscript.
+Kindly check the guidelines and see if your paper is within the scope of the journal, if yes,
+please go ahead and submit it..
+
+Types of paper
+•Full Research Papers: Full Research Papers should not exceed 8000 words (including abstract,Figures
+and tables but excluding references).
+• Short Communications: These follow the same format as full papers, except that Results and
+Discussion sections should be combined. Manuscripts should not exceed 5000 words.
+•Review Papers: Authors may submit manuscripts that provide in-depth critical review of a special
+subject. These reviews must provide a Synthesis and Critical Evaluation of the state of the knowledge
+of the subject and indicate research directions. The Editors also periodically invite review articles.
+Manuscripts should not exceed 10,000 words.
+•Discussion: Discussion (commentary) papers may be submitted that express opinions and concerns,
+suggest research priorities and question conventional methodologies and conclusions. Manuscripts
+should include an Abstract, Introduction, Presentation of the Concerns or Analysis and Conclusions.
+References, Tables and Illustrations should be used sparingly. The manuscript should not exceed 12
+double-spaced pages. The Editors will evaluate all manuscripts, for suitability of publication.
+•Correspondence: Readers are encouraged to write to any of the Editors (Letter to Editor) and raise
+issues and concerns about papers published in the journal. Editors or authors will reply to letters.
+•Special Issues: Proposals for Special Issues of Full Research Papers that focus on a specific topic
+or theme will also be considered. Special Issues will be published on emerging thematic issues and
+innovative conferences. An Editor or Associate Editor should be contacted early in the conference
+planning process to get approval and for guidelines on special issues of the journal. Furthermore, the
+Editors or Associate Editors will invite leading experts as Guest Editors for Special Issues.
+
+AUTHOR INFORMATION PACK 13 Apr 2017
+
+www.elsevier.com/locate/envpol
+
+6
+
+Please note that the word count includes main text, figures, tables and not the reference list. Each
+small table or figure counts for 300 words, and large tables or multiple panel figures may
+count for 600 or even more words.
+
+BEFORE YOU BEGIN
+Ethics in publishing
+Please see our information pages on Ethics in publishing and Ethical guidelines for journal publication.
+
+Declaration of interest
+All authors are requested to disclose any actual or potential conflict of interest including any financial,
+personal or other relationships with other people or organizations within three years of beginning the
+submitted work that could inappropriately influence, or be perceived to influence, their work. More
+information.
+
+Submission declaration and verification
+Submission of an article implies that the work described has not been published previously (except
+in the form of an abstract or as part of a published lecture or academic thesis or as an electronic
+preprint, see 'Multiple, redundant or concurrent publication' section of our ethics policy for more
+information), that it is not under consideration for publication elsewhere, that its publication is
+approved by all authors and tacitly or explicitly by the responsible authorities where the work was
+carried out, and that, if accepted, it will not be published elsewhere in the same form, in English or
+in any other language, including electronically without the written consent of the copyright-holder. To
+verify originality, your article may be checked by the originality detection service CrossCheck.
+
+Changes to authorship
+Authors are expected to consider carefully the list and order of authors before submitting their
+manuscript and provide the definitive list of authors at the time of the original submission. Any
+addition, deletion or rearrangement of author names in the authorship list should be made only
+before the manuscript has been accepted and only if approved by the journal Editor. To request such
+a change, the Editor must receive the following from the corresponding author: (a) the reason
+for the change in author list and (b) written confirmation (e-mail, letter) from all authors that they
+agree with the addition, removal or rearrangement. In the case of addition or removal of authors,
+this includes confirmation from the author being added or removed.
+Only in exceptional circumstances will the Editor consider the addition, deletion or rearrangement of
+authors after the manuscript has been accepted. While the Editor considers the request, publication
+of the manuscript will be suspended. If the manuscript has already been published in an online issue,
+any requests approved by the Editor will result in a corrigendum.
+Article transfer service
+This journal is part of our Article Transfer Service. This means that if the Editor feels your article is
+more suitable in one of our other participating journals, then you may be asked to consider transferring
+the article to one of those. If you agree, your article will be transferred automatically on your behalf
+with no need to reformat. Please note that your article will be reviewed again by the new journal.
+More information.
+
+Copyright
+Upon acceptance of an article, authors will be asked to complete a 'Journal Publishing Agreement' (see
+more information on this). An e-mail will be sent to the corresponding author confirming receipt of
+the manuscript together with a 'Journal Publishing Agreement' form or a link to the online version
+of this agreement.
+Subscribers may reproduce tables of contents or prepare lists of articles including abstracts for internal
+circulation within their institutions. Permission of the Publisher is required for resale or distribution
+outside the institution and for all other derivative works, including compilations and translations. If
+excerpts from other copyrighted works are included, the author(s) must obtain written permission
+from the copyright owners and credit the source(s) in the article. Elsevier has preprinted forms for
+use by authors in these cases.
+For open access articles: Upon acceptance of an article, authors will be asked to complete an
+'Exclusive License Agreement' (more information). Permitted third party reuse of open access articles
+is determined by the author's choice of user license.
+AUTHOR INFORMATION PACK 13 Apr 2017
+
+www.elsevier.com/locate/envpol
+
+7
+
+Author rights
+As an author you (or your employer or institution) have certain rights to reuse your work. More
+information.
+Elsevier supports responsible sharing
+Find out how you can share your research published in Elsevier journals.
+
+Role of the funding source
+You are requested to identify who provided financial support for the conduct of the research and/or
+preparation of the article and to briefly describe the role of the sponsor(s), if any, in study design; in
+the collection, analysis and interpretation of data; in the writing of the report; and in the decision to
+submit the article for publication. If the funding source(s) had no such involvement then this should
+be stated.
+Funding body agreements and policies
+Elsevier has established a number of agreements with funding bodies which allow authors to comply
+with their funder's open access policies. Some funding bodies will reimburse the author for the Open
+Access Publication Fee. Details of existing agreements are available online.
+
+Open access
+This journal offers authors a choice in publishing their research:
+Open access
+• Articles are freely available to both subscribers and the wider public with permitted reuse.
+• An open access publication fee is payable by authors or on their behalf, e.g. by their research funder
+or institution.
+Subscription
+• Articles are made available to subscribers as well as developing countries and patient groups through
+our universal access programs.
+• No open access publication fee payable by authors.
+Regardless of how you choose to publish your article, the journal will apply the same peer review
+criteria and acceptance standards.
+For open access articles, permitted third party (re)use is defined by the following Creative Commons
+user licenses:
+Creative Commons Attribution (CC BY)
+Lets others distribute and copy the article, create extracts, abstracts, and other revised versions,
+adaptations or derivative works of or from an article (such as a translation), include in a collective
+work (such as an anthology), text or data mine the article, even for commercial purposes, as long
+as they credit the author(s), do not represent the author as endorsing their adaptation of the article,
+and do not modify the article in such a way as to damage the author's honor or reputation.
+Creative Commons Attribution-NonCommercial-NoDerivs (CC BY-NC-ND)
+For non-commercial purposes, lets others distribute and copy the article, and to include in a collective
+work (such as an anthology), as long as they credit the author(s) and provided they do not alter or
+modify the article.
+The open access publication fee for this journal is USD 3000, excluding taxes. Learn more about
+Elsevier's pricing policy: https://www.elsevier.com/openaccesspricing.
+Green open access
+Authors can share their research in a variety of different ways and Elsevier has a number of
+green open access options available. We recommend authors see our green open access page for
+further information. Authors can also self-archive their manuscripts immediately and enable public
+access from their institution's repository after an embargo period. This is the version that has been
+accepted for publication and which typically includes author-incorporated changes suggested during
+submission, peer review and in editor-author communications. Embargo period: For subscription
+articles, an appropriate amount of time is needed for journals to deliver value to subscribing customers
+before an article becomes freely available to the public. This is the embargo period and it begins from
+the date the article is formally published online in its final and fully citable form. Find out more.
+This journal has an embargo period of 24 months.
+AUTHOR INFORMATION PACK 13 Apr 2017
+
+www.elsevier.com/locate/envpol
+
+8
+
+Elsevier Publishing Campus
+The Elsevier Publishing Campus (www.publishingcampus.com) is an online platform offering free
+lectures, interactive training and professional advice to support you in publishing your research. The
+College of Skills training offers modules on how to prepare, write and structure your article and
+explains how editors will look at your paper when it is submitted for publication. Use these resources,
+and more, to ensure that your submission will be the best that you can make it.
+Language (usage and editing services)
+Please write your text in good English (American or British usage is accepted, but not a mixture of
+these). Authors who feel their English language manuscript may require editing to eliminate possible
+grammatical or spelling errors and to conform to correct scientific English may wish to use the English
+Language Editing service available from Elsevier's WebShop.
+Submission
+* Manuscript Submission
+The
+complete
+manuscript
+can
+be
+submitted
+via
+Editorial
+http://www.ees.elsevier.com/envpol , following all instructions exactly.
+
+system(EVISE)at
+
+Complete manuscripts received via EVISE will be further evaluated by an Editor. Authors are
+requested to chose an editor most appropriate to their research field during the submission
+process in the "Provide additional information tab" during the submission process. This final
+evaluation will determine whether or not a manuscript will be sent out for review.
+Submission to this journal proceeds totally online and you will be guided stepwise through the creation
+and uploading of your files. The system automatically converts source files to a single PDF file of the
+article, which is used in the peer-review process. Please note that even though manuscript source
+files are converted to PDF files at submission for the review process, these source files are needed for
+further processing after acceptance. All correspondence, including notification of the Editor's decision
+and requests for revision, takes place by e-mail removing the need for a paper trail.
+Revised Submission: While submitting, the revised submission, please ensure to remove all the old
+files pertaining to the original submission and make sure to have the "Revised Manuscript" under the
+manuscript category along with the respective figures\Tables\GA\Highlights. Please note that authors
+have a maximum of 6 weeks to resubmit a revised manuscript, unless an extension is requested
+from the editor.
+The resubmission of previously rejected manuscripts is by invitation only.
+Referees
+Please submit, with the manuscript, the names, addresses and e-mail addresses of five potential
+referees who are well-qualified to review the manuscript, if they are asked to review it. Reviewers
+are asked to evaluate the originality, significance and technical quality of the work, as well as the
+clarity of the manuscript, and the relevance of the subject matter to the journal. The final decision
+for publication of all manuscripts is made by the Editor-in-Chief.
+
+PREPARATION
+NEW SUBMISSIONS
+Submission to this journal proceeds totally online and you will be guided stepwise through the creation
+and uploading of your files. The system automatically converts your files to a single PDF file, which
+is used in the peer-review process.
+As part of the Your Paper Your Way service, you may choose to submit your manuscript as a single file
+to be used in the refereeing process. This can be a PDF file or a Word document, in any format or layout that can be used by referees to evaluate your manuscript. It should contain high enough quality
+figures for refereeing. If you prefer to do so, you may still provide all or some of the source files at
+the initial submission. Please note that individual figure files larger than 10 MB must be uploaded
+separately.
+Line numbering: Authors are requested to enter continuous line numbering in their manuscript
+text files before uploading their source files here which will prevent errors of line numbers getting
+embedded with the text while the PDF is built.
+only YPYW (Your Paper Your Way)
+Reference Formatting: There are no strict requirements on reference formatting at submission.
+References can be in any style or format as long as the style is consistent. Where applicable, author(s)
+name(s), journal title/book title, chapter title/article title, year of publication, volume number/book
+AUTHOR INFORMATION PACK 13 Apr 2017
+
+www.elsevier.com/locate/envpol
+
+9
+
+chapter and the pagination must be present. Use of DOI is highly encouraged. The reference style
+used by the journal will be applied to the accepted article by Elsevier at the proof stage. Note that
+missing data will be highlighted at proof stage for the author to correct.
+[dataset] Oguro, M., Imahiro, S., Saito, S., Nakashizuka, T., 2015. Mortality data for Japanese oak
+wilt disease and surrounding forest compositions. Mendeley Data, v1. http://dx.doi.org/10.17632/
+xwj98nb39r.1.
+
+only YPYW (Your Paper Your Way)
+Formatting requirements: There are no strict formatting requirements but all manuscripts
+must contain the essential elements needed to convey your manuscript, for example Abstract,
+Keywords, Introduction, Materials and Methods, Results, Conclusions, Artwork and Tables
+with Captions.
+If your article includes any Videos and/or other Supplementary material, this should be included in
+your initial submission for peer review purposes.
+Divide the article into clearly defined sections. Please ensure your paper has consecutive line
+numbering - this is an essential peer review requirement.
+Figures and tables embedded in text
+Please ensure that any figures and tables included in the single file are placed at the end of the main
+text in the manuscript. If your article includes any Videos and/or other Supplementary material, this
+should be included in your initial submission for peer review purposes.
+
+REVISED SUBMISSIONS
+Use of word processing software
+Regardless of the file format of the original submission, at revision you must provide us with an
+editable file of the entire article. Keep the layout of the text as simple as possible. Most formatting
+codes will be removed and replaced on processing the article. The electronic text should be prepared
+in a way very similar to that of conventional manuscripts (see also the Guide to Publishing with
+Elsevier). See also the section on Electronic artwork.
+To avoid unnecessary errors you are strongly advised to use the 'spell-check' and 'grammar-check'
+functions of your word processor.
+Cover Letter
+A cover letter must be sent with the manuscript and must include:
+•The novelty, scientific significance and importance of the manuscript.
+•The names and valid, current e-mail addresses[institutional email addresses ONLY] for five (5)
+potential reviewers who are well-qualified to review the manuscript if they are asked to review it.
+Potential reviewers should be from the international scientific community and not from one country
+or region.
+•The name and e-mail address [institutional email addresses ONLY ] of the corresponding author.
+
+Article structure
+Subdivision - unnumbered heads
+Divide your article into clearly defined sections. Each subsection is given a brief heading. Each heading
+should appear on its own separate line. Subsections should be used as much as possible when crossreferencing text: refer to the subsection by heading as opposed to simply "the text".
+Introduction
+State the objectives of the work and provide an adequate background, avoiding a detailed literature
+survey or a summary of the results.
+Material and methods
+Provide sufficient detail to allow the work to be reproduced. Methods already published should be
+indicated by a reference: only relevant modifications should be described.
+Results
+Results should be clear and concise.
+Discussion
+This should explore the significance of the results of the work, not repeat them. A combined Results
+and Discussion section is often appropriate. Avoid extensive citations and discussion of published
+literature.
+AUTHOR INFORMATION PACK 13 Apr 2017
+
+www.elsevier.com/locate/envpol
+
+10
+
+Conclusions
+The main conclusions of the study may be presented in a short Conclusions section, which may stand
+alone or form a subsection of a Discussion or Results and Discussion section.
+Essential title page information
+• Title. Concise and informative. Titles are often used in information-retrieval systems. Avoid
+abbreviations and formulae where possible.
+• Author names and affiliations. Please clearly indicate the given name(s) and family name(s) of
+each author and check that all names are accurately spelled. Present the authors' affiliation addresses
+(where the actual work was done) below the names. Indicate all affiliations with a lower-case
+superscript letter immediately after the author's name and in front of the appropriate address. Provide
+the full postal address of each affiliation, including the country name and, if available, the e-mail
+address of each author.Authors are requested to provide only institutional email addresses.
+• Corresponding author. Clearly indicate who will handle correspondence at all stages of
+refereeing and publication, also post-publication. Environmental Pollution discourages multiple
+corresponding authors from the same institute. Ensure that the e-mail address is given and
+that contact details are kept up to date by the corresponding author.
+• Present/permanent address. If an author has moved since the work described in the article was
+done, or was visiting at the time, a 'Present address' (or 'Permanent address') may be indicated as
+a footnote to that author's name. The address at which the author actually did the work must be
+retained as the main, affiliation address. Superscript Arabic numerals are used for such footnotes.
+Abstract
+A concise and factual abstract is required. (maximum length 300 words).
+The abstract should state briefly the purpose of the research, the principal results and major
+conclusions. An abstract is often presented separately from the article, so it must be able to stand
+alone. For this reason, References should be avoided, but if essential, then cite the author(s) and
+year(s). Also, non-standard or uncommon abbreviations should be avoided, but if essential they must
+be defined at their first mention in the abstract itself.
+Capsule: In addition to the abstract for the manuscript, authors are required to submit a one- sentence
+statement that describes the significance of their work to the rest of the scientific community. When
+necessary, the capsule may be edited before publication.
+
+Graphical abstract
+A Graphical abstract is mandatory for this journal. It should summarize the contents of the article in
+a concise, pictorial form designed to capture the attention of a wide readership online. Authors must
+provide images that clearly represent the work described in the article. Graphical abstracts should be
+submitted as a separate file in the online submission system. Image size: please provide an image
+with a minimum of 531 × 1328 pixels (h × w) or proportionally more. The image should be readable
+at a size of 5 × 13 cm using a regular screen resolution of 96 dpi. Preferred file types: TIFF, EPS, PDF
+or MS Office files. See https://www.elsevier.com/graphicalabstracts for examples.
+Authors can make use of Elsevier's Illustration and Enhancement service to ensure the best
+presentation of their images also in accordance with all technical requirements: Illustration Service.
+Highlights
+Highlights are mandatory for this journal. They consist of a short collection of bullet points that
+convey the core findings of the article and should be submitted in a separate editable file in the
+online submission system. Please use 'Highlights' in the file name and include 3 to 5 bullet points
+(maximum 85 characters, including spaces, per bullet point). You can view example Highlights on
+our information site.
+Keywords
+Keywords: Immediately after the abstract, provide a maximum of 5 keywords, avoiding general and
+plural terms and multiple concepts (avoid, for example, "and", "of"). Be sparing with abbreviations:
+only abbreviations firmly established in the field may be eligible. Note that these keywords will be
+used for indexing purposes.
+
+AUTHOR INFORMATION PACK 13 Apr 2017
+
+www.elsevier.com/locate/envpol
+
+11
+
+Acknowledgements
+Collate acknowledgements in a separate section at the end of the article before the references and do
+not, therefore, include them on the title page, as a footnote to the title or otherwise. List here those
+individuals who provided help during the research (e.g., providing language help, writing assistance
+or proof reading the article, etc.).
+Formatting of funding sources
+List funding sources in this standard way to facilitate compliance to funder's requirements:
+Funding: This work was supported by the National Institutes of Health [grant numbers xxxx, yyyy];
+the Bill & Melinda Gates Foundation, Seattle, WA [grant number zzzz]; and the United States Institutes
+of Peace [grant number aaaa].
+It is not necessary to include detailed descriptions on the program or type of grants and awards. When
+funding is from a block grant or other resources available to a university, college, or other research
+institution, submit the name of the institute or organization that provided the funding.
+If no funding has been provided for the research, please include the following sentence:
+This research did not receive any specific grant from funding agencies in the public, commercial, or
+not-for-profit sectors.
+Units
+Units and symbols: The SI system should be used for all scientific and laboratory data: if in certain
+instance, it is necessary to quote other units, these should be added in parentheses. Temperatures
+should be given in degrees Celsius.
+Footnotes
+Footnotes should be used sparingly. Number them consecutively throughout the article. Many word
+processors build footnotes into the text, and this feature may be used. Should this not be the case,
+indicate the position of footnotes in the text and present the footnotes themselves separately at the
+end of the article.
+Electronic artwork
+General points
+• Make sure you use uniform lettering and sizing of your original artwork.
+• Preferred fonts: Arial (or Helvetica), Times New Roman (or Times), Symbol, Courier.
+• Number the illustrations according to their sequence in the text.
+• Use a logical naming convention for your artwork files.
+• Indicate per figure if it is a single, 1.5 or 2-column fitting image.
+• For Word submissions only, you may still provide figures and their captions, and tables within a
+single file at the revision stage.
+• Please note that individual figure files larger than 10 MB must be provided in separate source files.
+A detailed guide on electronic artwork is available.
+You are urged to visit this site; some excerpts from the detailed information are given here.
+Formats
+Regardless of the application used, when your electronic artwork is finalized, please 'save as' or
+convert the images to one of the following formats (note the resolution requirements for line drawings,
+halftones, and line/halftone combinations given below):
+EPS (or PDF): Vector drawings. Embed the font or save the text as 'graphics'.
+TIFF (or JPG): Color or grayscale photographs (halftones): always use a minimum of 300 dpi.
+TIFF (or JPG): Bitmapped line drawings: use a minimum of 1000 dpi.
+TIFF (or JPG): Combinations bitmapped line/half-tone (color or grayscale): a minimum of 500 dpi
+is required.
+Please do not:
+• Supply files that are optimized for screen use (e.g., GIF, BMP, PICT, WPG); the resolution is too low.
+• Supply files that are too low in resolution.
+• Submit graphics that are disproportionately large for the content.
+Color artwork
+Please make sure that artwork files are in an acceptable format (TIFF (or JPEG), EPS (or PDF), or
+MS Office files) and with the correct resolution. If, together with your accepted article, you submit
+usable color figures then Elsevier will ensure, at no additional charge, that these figures will appear
+AUTHOR INFORMATION PACK 13 Apr 2017
+
+www.elsevier.com/locate/envpol
+
+12
+
+in color online (e.g., ScienceDirect and other sites) regardless of whether or not these illustrations
+are reproduced in color in the printed version. For color reproduction in print, you will receive
+information regarding the costs from Elsevier after receipt of your accepted article. Please
+indicate your preference for color: in print or online only. Further information on the preparation of
+electronic artwork.
+Figure captions
+Ensure that each illustration has a caption. A caption should comprise a brief title (not on the figure
+itself) and a description of the illustration. Keep text in the illustrations themselves to a minimum but
+explain all symbols and abbreviations used.
+
+Tables
+Please submit tables as editable text and not as images. Tables can be placed either next to the
+relevant text in the article, or on separate page(s) at the end. Number tables consecutively in
+accordance with their appearance in the text and place any table notes below the table body. Be
+sparing in the use of tables and ensure that the data presented in them do not duplicate results
+described elsewhere in the article. Please avoid using vertical rules and shading in table cells.
+References
+Responsibility for the accuracy of bibliographic citations lies entirely with the authors.
+Citation in text
+Please ensure that every reference cited in the text is also present in the reference list (and vice
+versa). Any references cited in the abstract must be given in full. Unpublished results and personal
+communications are not recommended in the reference list, but may be mentioned in the text. If these
+references are included in the reference list they should follow the standard reference style of the
+journal and should include a substitution of the publication date with either 'Unpublished results' or
+'Personal communication'. Citation of a reference as 'in press' implies that the item has been accepted
+for publication.
+Reference links
+Increased discoverability of research and high quality peer review are ensured by online links to
+the sources cited. In order to allow us to create links to abstracting and indexing services, such as
+Scopus, CrossRef and PubMed, please ensure that data provided in the references are correct. Please
+note that incorrect surnames, journal/book titles, publication year and pagination may prevent link
+creation. When copying references, please be careful as they may already contain errors. Use of the
+DOI is encouraged.
+A DOI can be used to cite and link to electronic articles where an article is in-press and full citation
+details are not yet known, but the article is available online. A DOI is guaranteed never to change,
+so you can use it as a permanent link to any electronic article. An example of a citation using DOI
+for an article not yet in an issue is: VanDecar J.C., Russo R.M., James D.E., Ambeh W.B., Franke M.
+(2003). Aseismic continuation of the Lesser Antilles slab beneath northeastern Venezuela. Journal
+of Geophysical Research, https://doi.org/10.1029/2001JB000884. Please note the format of such
+citations should be in the same style as all other references in the paper.
+Web references
+As a minimum, the full URL should be given and the date when the reference was last accessed. Any
+further information, if known (DOI, author names, dates, reference to a source publication, etc.),
+should also be given. Web references can be listed separately (e.g., after the reference list) under a
+different heading if desired, or can be included in the reference list.
+Data references
+This journal encourages you to cite underlying or relevant datasets in your manuscript by citing them
+in your text and including a data reference in your Reference List. Data references should include the
+following elements: author name(s), dataset title, data repository, version (where available), year,
+and global persistent identifier. Add [dataset] immediately before the reference so we can properly
+identify it as a data reference. The [dataset] identifier will not appear in your published article.
+Reference management software
+Most Elsevier journals have their reference template available in many of the most popular reference
+management software products. These include all products that support Citation Style Language
+styles, such as Mendeley and Zotero, as well as EndNote. Using the word processor plug-ins from
+these products, authors only need to select the appropriate journal template when preparing their
+AUTHOR INFORMATION PACK 13 Apr 2017
+
+www.elsevier.com/locate/envpol
+
+13
+
+article, after which citations and bibliographies will be automatically formatted in the journal's style.
+If no template is yet available for this journal, please follow the format of the sample references and
+citations as shown in this Guide.
+Users of Mendeley Desktop can easily install the reference style for this journal by clicking the following
+link:
+http://open.mendeley.com/use-citation-style/environmental-pollution
+When preparing your manuscript, you will then be able to select this style using the Mendeley plugins for Microsoft Word or LibreOffice.
+Reference formatting
+There are no strict requirements on reference formatting at submission. References can be in any style
+or format as long as the style is consistent. Where applicable, author(s) name(s), journal title/book
+title, chapter title/article title, year of publication, volume number/book chapter and the pagination
+must be present. Use of DOI is highly encouraged. The reference style used by the journal will be
+applied to the accepted article by Elsevier at the proof stage. Note that missing data will be highlighted
+at proof stage for the author to correct. If you do wish to format the references yourself they should
+be arranged according to the following examples:
+Reference style
+Name and year style in the text
+Text: All citations in the text should refer to:
+1. Single author: the author's name (without initials, unless there is ambiguity) and the year of
+publication;
+2. Two authors: both authors' names and the year of publication;
+3. Three or more authors: first author's name followed by 'et al.' and the year of publication. Citations
+may be made directly (or parenthetically). Groups of references should be listed first alphabetically,
+then chronologically.
+Examples: "as demonstrated (Allan, 1996a, 1996b, 1999; Allan and Jones, 1995). Kramer et al.
+(2000) have recently shown ..."
+List: References should be arranged first alphabetically and then further sorted chronologically if
+necessary. More than one reference from the same author(s) in the same year must be identified by
+the letters "a", "b", "c", etc., placed after the year of publication. Note that any (consistent) reference
+style and format may be used: the Publisher will ensure that the correct style for this journal will be
+introduced for the proof stages, the final print version and the PDF files for electronic distribution.
+Examples:
+Reference to a journal publication:
+Van der Geer, J., Hanraads, J.A.J., Lupton, R.A., 2000. The art of writing a scientific article. Journal
+of Scientific Communications 163, 51-59.
+Reference to a book:
+Strunk Jr., W., White, E.B., 1979. The Elements of Style, third ed. Macmillan, New York. Reference
+to a chapter in an edited book:
+Mettam, G.R., Adams, L.B., 1999. How to prepare an electronic version of your article, in: Jones, B.S.,
+Smith, R.Z. (Eds.), Introduction to the Electronic Age. E-Publishing Inc., New York, pp. 281-304.
+
+Video
+Elsevier accepts video material and animation sequences to support and enhance your scientific
+research. Authors who have video or animation files that they wish to submit with their article are
+strongly encouraged to include links to these within the body of the article. This can be done in the
+same way as a figure or table by referring to the video or animation content and noting in the body
+text where it should be placed. All submitted files should be properly labeled so that they directly
+relate to the video file's content. In order to ensure that your video or animation material is directly
+usable, please provide the files in one of our recommended file formats with a preferred maximum size
+of 150 MB. Video and animation files supplied will be published online in the electronic version of your
+article in Elsevier Web products, including ScienceDirect. Please supply 'stills' with your files: you can
+choose any frame from the video or animation or make a separate image. These will be used instead
+of standard icons and will personalize the link to your video data. For more detailed instructions please
+visit our video instruction pages. Note: since video and animation cannot be embedded in the print
+version of the journal, please provide text for both the electronic and the print version for the portions
+of the article that refer to this content.
+
+AUTHOR INFORMATION PACK 13 Apr 2017
+
+www.elsevier.com/locate/envpol
+
+14
+
+Supplementary material
+Supplementary material such as applications, images and sound clips, can be published with your
+article to enhance it. Submitted supplementary items are published exactly as they are received (Excel
+or PowerPoint files will appear as such online). Please submit your material together with the article
+and supply a concise, descriptive caption for each supplementary file. If you wish to make changes to
+supplementary material during any stage of the process, please make sure to provide an updated file.
+Do not annotate any corrections on a previous version. Please switch off the 'Track Changes' option
+in Microsoft Office files as these will appear in the published version.
+Data linking
+If you have made your research data available in a data repository, you can link your article directly to
+the dataset. Elsevier collaborates with a number of repositories to link articles on ScienceDirect with
+relevant repositories, giving readers access to underlying data that give them a better understanding
+of the research described.
+There are different ways to link your datasets to your article. When available, you can directly link
+your dataset to your article by providing the relevant information in the submission system. For more
+information, visit the database linking page.
+For supported data repositories a repository banner will automatically appear next to your published
+article on ScienceDirect.
+In addition, you can link to relevant data or entities through identifiers within the text of your
+manuscript, using the following format: Database: xxxx (e.g., TAIR: AT1G01020; CCDC: 734053;
+PDB: 1XFN).
+
+AudioSlides
+The journal encourages authors to create an AudioSlides presentation with their published article.
+AudioSlides are brief, webinar-style presentations that are shown next to the online article on
+ScienceDirect. This gives authors the opportunity to summarize their research in their own words
+and to help readers understand what the paper is about. More information and examples are
+available. Authors of this journal will automatically receive an invitation e-mail to create an AudioSlides
+presentation after acceptance of their paper.
+
+Interactive plots
+This journal enables you to show an Interactive Plot with your article by simply submitting a data
+file. Full instructions.
+
+Submission checklist
+The following list will be useful during the final checking of an article prior to sending it to the journal
+for review. Please consult this Guide for Authors for further details of any item.
+Ensure that the following items are present:
+• Please check continuous line numbers are present
+One author has been designated as the corresponding author with contact details:
+• E-mail address
+• Full postal address
+All necessary files have been uploaded, and contain:
+• Keywords
+• All figure captions
+• All tables (including title, description, footnotes)
+Further considerations
+• Manuscript has been 'spell-checked' and 'grammar-checked'
+• All references mentioned in the Reference list are cited in the text, and vice versa
+• Permission has been obtained for use of copyrighted material from other sources (including the
+Internet)
+Printed version of figures (if applicable) in color or black-and-white
+• Indicate clearly whether or not color or black-and-white in print is required.
+For any further information please visit our customer support site at http://support.elsevier.com.
+
+AFTER ACCEPTANCE
+
+AUTHOR INFORMATION PACK 13 Apr 2017
+
+www.elsevier.com/locate/envpol
+
+15
+
+Online proof correction
+Corresponding authors will receive an e-mail with a link to our online proofing system, allowing
+annotation and correction of proofs online. The environment is similar to MS Word: in addition to
+editing text, you can also comment on figures/tables and answer questions from the Copy Editor.
+Web-based proofing provides a faster and less error-prone process by allowing you to directly type
+your corrections, eliminating the potential introduction of errors.
+If preferred, you can still choose to annotate and upload your edits on the PDF version. All instructions
+for proofing will be given in the e-mail we send to authors, including alternative methods to the online
+version and PDF.
+We will do everything possible to get your article published quickly and accurately. Please use this
+proof only for checking the typesetting, editing, completeness and correctness of the text, tables and
+figures. Significant changes to the article as accepted for publication will only be considered at this
+stage with permission from the Editor. It is important to ensure that all corrections are sent back
+to us in one communication. Please check carefully before replying, as inclusion of any subsequent
+corrections cannot be guaranteed. Proofreading is solely your responsibility.
+
+Offprints
+The corresponding author will, at no cost, receive a customized Share Link providing 50 days free
+access to the final published version of the article on ScienceDirect. The Share Link can be used
+for sharing the article via any communication channel, including email and social media. For an
+extra charge, paper offprints can be ordered via the offprint order form which is sent once the
+article is accepted for publication. Both corresponding and co-authors may order offprints at any
+time via Elsevier's Webshop. Corresponding authors who have published their article open access do
+not receive a Share Link as their final published version of the article is available open access on
+ScienceDirect and can be shared through the article DOI link.
+Additional information
+Language editing
+Information on author-paid and pre-accept language editing services available to authors can be
+found at http://authors.elsevier.com/LanguageEditing.html .
+Online Publication
+Your article will appear on Elsevier's online journal database ScienceDirect as an "Article in Press"
+within approximately 4-6 weeks of acceptance. Articles in Press for this journal can be viewed at
+http://www.sciencedirect.com/science/journal/02697491 . An Article in Press may be cited prior to
+its publication by means of its unique digital object identifier (DOI) number, which does not change
+throughout the publication process.
+
+AUTHOR INQUIRIES
+Visit the Elsevier Support Center to find the answers you need. Here you will find everything from
+Frequently Asked Questions to ways to get in touch.
+You can also check the status of your submitted article or find out when your accepted article will
+be published.
+© Copyright 2014 Elsevier | http://www.elsevier.com
+
+AUTHOR INFORMATION PACK 13 Apr 2017
+
+www.elsevier.com/locate/envpol
+
+16
+
+

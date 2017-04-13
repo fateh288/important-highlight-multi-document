@@ -2,6 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd77371c-01fd-4910-908f-4f40036309fd" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/books/d1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/books/d1.txt.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/books/d1.txt.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/books/d2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/books/d2.txt.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/books/d2.txt.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/books/d3.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/books/d3.txt.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/books/d3.txt.pdf" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/h_cluster.ipynb" afterPath="$PROJECT_DIR$/h_cluster.ipynb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
